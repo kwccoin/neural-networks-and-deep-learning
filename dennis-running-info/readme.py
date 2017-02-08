@@ -19,13 +19,16 @@
 ###f2 = open('test-write.txt','r+')
 ###f.read()
 ###f.close()
-
+import numpy as np
 
 
 import os
-os.chdir("/Users/dngMBA13user/Library/Mobile Documents/M6HJR9W95L~com~textasticapp~textastic/Documents/icloud-personal/github/neural-networks-and-deep-learning/src")
-os.getcwd()
+#os.chdir("/Users/dngMBA13user/Library/Mobile Documents/M6HJR9W95L~com~textasticapp~textastic/Documents/icloud-personal/github/neural-networks-and-deep-learning/src")
+os.chdir("/Users/ext2int2adm/git-here/neural-networks-and-deep-learning/src")
+print os.getcwd()
+print os.listdir(os.curdir)
 np.random.seed(1)
+
 import mnist_loader
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
 training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
