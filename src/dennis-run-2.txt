@@ -1,0 +1,36 @@
+>>> import time
+>>> t0=time.time()
+>>> net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+Epoch 0: 9451 / 10000
+Epoch 1: 9501 / 10000
+Epoch 2: 9473 / 10000
+Epoch 3: 9484 / 10000
+Epoch 4: 9443 / 10000
+Epoch 5: 9477 / 10000
+Epoch 6: 9459 / 10000
+Epoch 7: 9492 / 10000
+Epoch 8: 9490 / 10000
+Epoch 9: 9490 / 10000
+Epoch 10: 9470 / 10000
+Epoch 11: 9491 / 10000
+Epoch 12: 9488 / 10000
+Epoch 13: 9491 / 10000
+Epoch 14: 9484 / 10000
+Epoch 15: 9479 / 10000
+Epoch 16: 9485 / 10000
+Epoch 17: 9468 / 10000
+Epoch 18: 9503 / 10000
+Epoch 19: 9467 / 10000
+Epoch 20: 9486 / 10000
+Epoch 21: 9481 / 10000
+Epoch 22: 9473 / 10000
+Epoch 23: 9484 / 10000
+Epoch 24: 9451 / 10000
+Epoch 25: 9483 / 10000
+Epoch 26: 9465 / 10000
+Epoch 27: 9458 / 10000
+Epoch 28: 9473 / 10000
+Epoch 29: 9481 / 10000
+>>> t1=time.time()
+>>> print t1 - t0
+220.017999887
