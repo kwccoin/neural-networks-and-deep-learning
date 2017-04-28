@@ -1,0 +1,1189 @@
+dn-dom@dndom-desktop:~$ ls
+Desktop    Downloads         libgpuarray  Music     Public     Videos
+Documents  examples.desktop  miniconda2   Pictures  Templates
+dn-dom@dndom-desktop:~$ cd exaSSSQAASSSaaaas`123
+> l\
+> exit
+> quui
+> t
+> ^C
+dn-dom@dndom-desktop:~$ ls
+Desktop    Downloads         libgpuarray  Music     Public     Videos
+Documents  examples.desktop  miniconda2   Pictures  Templates
+dn-dom@dndom-desktop:~$ cd examples.desktop
+bash: cd: examples.desktop: Not a directory
+dn-dom@dndom-desktop:~$ ls
+Desktop    Downloads         libgpuarray  Music     Public     Videos
+Documents  examples.desktop  miniconda2   Pictures  Templates
+dn-dom@dndom-desktop:~$ cd Do
+Documents/ Downloads/
+dn-dom@dndom-desktop:~$ cd Downloads
+dn-dom@dndom-desktop:~/Downloads$ ls
+atom-amd64.deb
+CudaNeuralNetworks
+cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+cudnn
+DiffPlugInstallerExtracted
+DiffPlugInstaller_linux_x64_1.6.1.sh
+libcudnn6_6.0.20-1+cuda8.0_amd64.deb
+Miniconda2-latest-Linux-x86_64.sh
+neural-networks-and-deep-learning
+NVIDIA_CUDA-8.0_Samples
+NVIDIA-Linux-x86_64-378.13.run
+py-cnn
+dn-dom@dndom-desktop:~/Downloads$ cd CudaNeuralNetworks/
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks$ ls
+archive-and-log     dng1-Vadd.mac  html-helper-pages  nn.python-script
+_before_cuda_study  dng2-Vadd.w10  nn-dn              ubuntu-some-log.txt
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks$ cd _before_cuda_study/
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ ls
+Makefile  nn-2_cuda.cu     nn-2_cuda.h    nn-2.h     utils-2_cuda.cu
+nn-2.cu   nn-2_cuda.debug  nn-2_cuda.out  utils-2.c
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ make
+nvcc nn-2.cu -o nn-2_cuda.debug -DGPU -I/usr/local/cuda/include/ -L/usr/local/cuda/lib -lcuda -lcudart -lcublas -lcurand -DDEBUG2c
+make: nvcc: Command not found
+Makefile:18: recipe for target 'nn-2_cuda.debug' failed
+make: *** [nn-2_cuda.debug] Error 127
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ echo $PATH
+/home/dn-dom/miniconda2/bin:/home/dn-dom/bin:/home/dn-dom/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ vim ~/.bash_profile
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ . ~/.bash_profile
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ make
+nvcc nn-2.cu -o nn-2_cuda.debug -DGPU -I/usr/local/cuda/include/ -L/usr/local/cuda/lib -lcuda -lcudart -lcublas -lcurand -DDEBUG2c
+nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+# -DDEBUG2c
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ ls
+Makefile  nn-2_cuda.cu     nn-2_cuda.h    nn-2.h     utils-2_cuda.cu
+nn-2.cu   nn-2_cuda.debug  nn-2_cuda.out  utils-2.c
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ ./nn-2_cuda.out
+bash: ./nn-2_cuda.out: cannot execute binary file: Exec format error
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ ./nn-2_cuda.debug
+nn-2 253 ------------------ main() starting -------------------------------n
+ ========= length of patternfs[]: 1
+ patternfs[0]: no:0 p.data:0.050000,no:1 p.data:0.100000, no:0 p.result:0.010000 no:1 p.result:0.990000
+ ========= No of run           : 0
+
+
+ nn-2-295 Testing the network mixing the build, validation and test idea due the data's nature
+
+ DEBUG2-a ***** before input 2 hidden LAYER UPDATE *****
+
+--nn start seems input +/-1 is for bias but only for input strangely --
+
+ nn.n_inputs already plus 1: 3
+ nn.n_hidden:                3
+ nn.n_outputs:               2
+
+ nn.out_input[0]: 1.000000
+ nn.out_input[1]: 1.000000
+ nn.out_input[2]: 1.000000
+ nn.out_hidden[0]: 1.000000
+ nn.out_hidden[1]: 1.000000
+ nn.out_hidden[2]: 1.000000
+ nn.out_output[0]: 1.000000
+ nn.out_output[1]: 1.000000
+
+ nn.changes_input_hidden[0]: 0.000000
+ nn.changes_input_hidden[1]: 0.000000
+ nn.changes_input_hidden[2]: 0.000000
+ nn.changes_input_hidden[3]: 0.000000
+ nn.changes_input_hidden[4]: 0.000000
+ nn.changes_input_hidden[5]: 0.000000
+ nn.changes_input_hidden[6]: 0.000000
+ nn.changes_input_hidden[7]: 0.000000
+ nn.changes_input_hidden[8]: 0.000000
+ nn.changes_hidden_output[0]: 0.000000
+ nn.changes_hidden_output[1]: 0.000000
+ nn.changes_hidden_output[2]: 0.000000
+ nn.changes_hidden_output[3]: 0.000000
+ nn.changes_hidden_output[4]: 0.000000
+ nn.changes_hidden_output[5]: 0.000000
+
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+
+ nn.w_input_hidden[0]: 0.150000
+ nn.w_input_hidden[1]: 0.200000
+ nn.w_input_hidden[2]: 0.000000
+ nn.w_input_hidden[3]: 0.250000
+ nn.w_input_hidden[4]: 0.300000
+ nn.w_input_hidden[5]: 0.000000
+ nn.w_input_hidden[6]: 0.350000
+ nn.w_input_hidden[7]: 0.350000
+ nn.w_input_hidden[8]: 0.000000
+ nn.w_hidden_output[0]: 0.400000
+ nn.w_hidden_output[1]: 0.450000
+ nn.w_hidden_output[2]: 0.000000
+ nn.w_hidden_output[3]: 0.500000
+ nn.w_hidden_output[4]: 0.550000
+ nn.w_hidden_output[5]: 0.000000
+
+0.150000 0.200000 0.000000
+0.250000 0.300000 0.000000
+0.350000 0.350000 0.000000
+
+0.400000 0.450000 0.000000
+0.500000 0.550000 0.000000
+
+
+--nn end   --
+*** Error in `./nn-2_cuda.debug': free(): invalid next size (normal): 0x00000000010036b0 ***
+======= Backtrace: =========
+/lib/x86_64-linux-gnu/libc.so.6(+0x777e5)[0x7f0f606477e5]
+/lib/x86_64-linux-gnu/libc.so.6(+0x7fe0a)[0x7f0f6064fe0a]
+/lib/x86_64-linux-gnu/libc.so.6(cfree+0x4c)[0x7f0f6065398c]
+/lib/x86_64-linux-gnu/libc.so.6(_IO_setb+0x4b)[0x7f0f6064b54b]
+/lib/x86_64-linux-gnu/libc.so.6(_IO_file_close_it+0xae)[0x7f0f606498ee]
+/lib/x86_64-linux-gnu/libc.so.6(fclose+0x18f)[0x7f0f6063d3ef]
+/usr/lib/x86_64-linux-gnu/libcuda.so.1(+0x1bcf39)[0x7f0f5f764f39]
+/usr/lib/x86_64-linux-gnu/libcuda.so.1(+0x195b23)[0x7f0f5f73db23]
+/usr/lib/x86_64-linux-gnu/libcuda.so.1(+0xbdca8)[0x7f0f5f665ca8]
+/usr/lib/x86_64-linux-gnu/libcuda.so.1(cuInit+0x4d)[0x7f0f5f78b63d]
+/usr/local/cuda-8.0/lib64/libcudart.so.8.0(+0x1bdd5)[0x7f0f60ee3dd5]
+/usr/local/cuda-8.0/lib64/libcudart.so.8.0(+0x1be31)[0x7f0f60ee3e31]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0xea99)[0x7f0f601b6a99]
+/usr/local/cuda-8.0/lib64/libcudart.so.8.0(+0x4e919)[0x7f0f60f16919]
+/usr/local/cuda-8.0/lib64/libcudart.so.8.0(+0x1800a)[0x7f0f60ee000a]
+/usr/local/cuda-8.0/lib64/libcudart.so.8.0(+0x1bceb)[0x7f0f60ee3ceb]
+/usr/local/cuda-8.0/lib64/libcudart.so.8.0(cudaMalloc+0x52)[0x7f0f60f06492]
+./nn-2_cuda.debug[0x401024]
+./nn-2_cuda.debug[0x4013a2]
+./nn-2_cuda.debug[0x401def]
+./nn-2_cuda.debug[0x40265d]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7f0f605f0830]
+./nn-2_cuda.debug[0x400d99]
+======= Memory map: ========
+00400000-00406000 r-xp 00000000 08:11 3671350                            /home/dn-dom/Downloads/CudaNeuralNetworks/_before_cuda_study/nn-2_cuda.debug
+00605000-00606000 r--p 00005000 08:11 3671350                            /home/dn-dom/Downloads/CudaNeuralNetworks/_before_cuda_study/nn-2_cuda.debug
+00606000-00607000 rw-p 00006000 08:11 3671350                            /home/dn-dom/Downloads/CudaNeuralNetworks/_before_cuda_study/nn-2_cuda.debug
+01002000-01023000 rw-p 00000000 00:00 0                                  [heap]
+7f0f58000000-7f0f58021000 rw-p 00000000 00:00 0
+7f0f58021000-7f0f5c000000 ---p 00000000 00:00 0
+7f0f5f358000-7f0f5f39a000 r-xp 00000000 08:11 13504045                   /usr/lib/nvidia-375/libnvidia-fatbinaryloader.so.375.39
+7f0f5f39a000-7f0f5f599000 ---p 00042000 08:11 13504045                   /usr/lib/nvidia-375/libnvidia-fatbinaryloader.so.375.39
+7f0f5f599000-7f0f5f5a3000 rw-p 00041000 08:11 13504045                   /usr/lib/nvidia-375/libnvidia-fatbinaryloader.so.375.39
+7f0f5f5a3000-7f0f5f5a4000 rw-p 00000000 00:00 0
+7f0f5f5a8000-7f0f5fc76000 r-xp 00000000 08:11 12586730                   /usr/lib/x86_64-linux-gnu/libcuda.so.375.39
+7f0f5fc76000-7f0f5fe75000 ---p 006ce000 08:11 12586730                   /usr/lib/x86_64-linux-gnu/libcuda.so.375.39
+7f0f5fe75000-7f0f5ff91000 rw-p 006cd000 08:11 12586730                   /usr/lib/x86_64-linux-gnu/libcuda.so.375.39
+7f0f5ff91000-7f0f5ff9d000 rw-p 00000000 00:00 0
+7f0f5ffa0000-7f0f5ffa7000 r-xp 00000000 08:11 9961565                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f0f5ffa7000-7f0f601a6000 ---p 00007000 08:11 9961565                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f0f601a6000-7f0f601a7000 r--p 00006000 08:11 9961565                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f0f601a7000-7f0f601a8000 rw-p 00007000 08:11 9961565                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f0f601a8000-7f0f601c0000 r-xp 00000000 08:11 9961569                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f0f601c0000-7f0f603bf000 ---p 00018000 08:11 9961569                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f0f603bf000-7f0f603c0000 r--p 00017000 08:11 9961569                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f0f603c0000-7f0f603c1000 rw-p 00018000 08:11 9961569                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f0f603c1000-7f0f603c5000 rw-p 00000000 00:00 0
+7f0f603c8000-7f0f603cb000 r-xp 00000000 08:11 9961497                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f0f603cb000-7f0f605ca000 ---p 00003000 08:11 9961497                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f0f605ca000-7f0f605cb000 r--p 00002000 08:11 9961497                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f0f605cb000-7f0f605cc000 rw-p 00003000 08:11 9961497                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f0f605d0000-7f0f6078f000 r-xp 00000000 08:11 9961558                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f0f6078f000-7f0f6098f000 ---p 001bf000 08:11 9961558                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f0f6098f000-7f0f60993000 r--p 001bf000 08:11 9961558                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f0f60993000-7f0f60995000 rw-p 001c3000 08:11 9961558                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f0f60995000-7f0f60999000 rw-p 00000000 00:00 0
+7f0f609a0000-7f0f609b6000 r-xp 00000000 08:11 9966058                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f0f609b6000-7f0f60bb5000 ---p 00016000 08:11 9966058                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f0f60bb5000-7f0f60bb6000 rw-p 00015000 08:11 9966058                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f0f60bb8000-7f0f60cc0000 r-xp 00000000 08:11 9961556                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f0f60cc0000-7f0f60ebf000 ---p 00108000 08:11 9961556                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f0f60ebf000-7f0f60ec0000 r--p 00107000 08:11 9961556                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f0f60ec0000-7f0f60ec1000 rw-p 00108000 08:11 9961556                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f0f60ec8000-7f0f60f2a000 r-xp 00000000 08:11 12721887                   /usr/local/cuda-8.0/targets/x86_64-linux/lib/libcudart.so.8.0.61
+7f0f60f2a000-7f0f6112a000 ---p 00062000 08:11 12721887                   /usr/local/cuda-8.0/targets/x86_64-linux/lib/libcudart.so.8.0.61
+7f0f6112a000-7f0f6112d000 rw-p 00062000 08:11 12721887                   /usr/local/cuda-8.0/targets/x86_64-linux/lib/libcudart.so.8.0.61
+7f0f6112d000-7f0f6112e000 rw-p 00000000 00:00 0
+7f0f61130000-7f0f61156000 r-xp 00000000 08:11 9961559                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f0f61336000-7f0f61338000 rw-p 00000000 00:00 0
+7f0f61352000-7f0f61355000 rw-p 00000000 00:00 0
+7f0f61355000-7f0f61356000 r--p 00025000 08:11 9961559                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f0f61356000-7f0f61357000 rw-p 00026000 08:11 9961559                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f0f61357000-7f0f61359000 rw-p 00000000 00:00 0
+7f0f61359000-7f0f6135b000 rw-p 00000000 00:00 0
+7fffa43c6000-7fffa43e7000 rw-p 00000000 00:00 0                          [stack]
+7fffa43e8000-7fffa43ea000 r--p 00000000 00:00 0                          [vvar]
+7fffa43ea000-7fffa43ec000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Aborted (core dumped)
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks/_before_cuda_study$ cd ..
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks$ l;s
+archive-and-log/  _before_cuda_study/  dng1-Vadd.mac/  dng2-Vadd.w10/  html-helper-pages/  nn-dn/  nn.python-script/  ubuntu-some-log.txt
+s: command not found
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks$ ls
+archive-and-log  _before_cuda_study  dng1-Vadd.mac  dng2-Vadd.w10  html-helper-pages  nn-dn  nn.python-script  ubuntu-some-log.txt
+dn-dom@dndom-desktop:~/Downloads/CudaNeuralNetworks$ cd ..
+dn-dom@dndom-desktop:~/Downloads$ ls
+atom-amd64.deb                                         cudnn                                 libcudnn6_6.0.20-1+cuda8.0_amd64.deb  NVIDIA_CUDA-8.0_Samples
+CudaNeuralNetworks                                     DiffPlugInstallerExtracted            Miniconda2-latest-Linux-x86_64.sh     NVIDIA-Linux-x86_64-378.13.run
+cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb  DiffPlugInstaller_linux_x64_1.6.1.sh  neural-networks-and-deep-learning     py-cnn
+dn-dom@dndom-desktop:~/Downloads$ cd neural-networks-and-deep-learning/
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning$ ls
+data  dennis-running-info  fig  need2move.no.underlines  README.md  requirements.txt  src
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning$ pip install -r requirements.txt
+Requirement already satisfied: numpy in /home/dn-dom/miniconda2/lib/python2.7/site-packages (from -r requirements.txt (line 1))
+Collecting scikit-learn (from -r requirements.txt (line 2))
+  Downloading scikit_learn-0.18.1-cp27-cp27mu-manylinux1_x86_64.whl (11.6MB)
+    100% |████████████████████████████████| 11.7MB 105kB/s
+Requirement already satisfied: scipy in /home/dn-dom/miniconda2/lib/python2.7/site-packages (from -r requirements.txt (line 3))
+Requirement already satisfied: Theano in /home/dn-dom/miniconda2/lib/python2.7/site-packages (from -r requirements.txt (line 4))
+Requirement already satisfied: six>=1.9.0 in /home/dn-dom/miniconda2/lib/python2.7/site-packages (from Theano->-r requirements.txt (line 4))
+Installing collected packages: scikit-learn
+Successfully installed scikit-learn-0.18.1
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning$ ls
+data  dennis-running-info  fig  need2move.no.underlines  README.md  requirements.txt  src
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning$ cd src
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ ;s
+bash: syntax error near unexpected token `;'
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ ls
+conv.py           dennis-run.py                      expand_mnist.py            mnist_loader.pyc  network3a.pyc  old
+dennis-run-2.txt  dennis_test_module.py              fibo.py                    mnist_svm.py      network3.py    test-write.txt
+dennis-run-3.txt  dennis-test-theano.py              mnist_average_darkness.py  network2.py       network.py
+dennis-run-4.txt  dennis-theano-did-use-gpu.log.txt  mnist_loader.py            network3a.py      network.pyc
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ vim dennis-run.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ python dennis-run.py
+dennis-run starting ...
+mnist_loader starting ...
+dennis-run program starting
+Trying to run under a GPU.  If this is not desired, then modify network3.py
+to set the GPU flag to False.
+dennis-run training starting
+Training mini-batch number 0
+Training mini-batch number 1000
+Training mini-batch number 2000
+Training mini-batch number 3000
+Training mini-batch number 4000
+Epoch 0: validation accuracy 92.50%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 91.80%
+Training mini-batch number 5000
+Training mini-batch number 6000
+Training mini-batch number 7000
+Training mini-batch number 8000
+Training mini-batch number 9000
+Epoch 1: validation accuracy 94.76%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 94.01%
+Training mini-batch number 10000
+Training mini-batch number 11000
+Training mini-batch number 12000
+Training mini-batch number 13000
+Training mini-batch number 14000
+Epoch 2: validation accuracy 95.72%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 95.27%
+Training mini-batch number 15000
+Training mini-batch number 16000
+Training mini-batch number 17000
+Training mini-batch number 18000
+Training mini-batch number 19000
+Epoch 3: validation accuracy 96.33%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 95.80%
+Training mini-batch number 20000
+Training mini-batch number 21000
+Training mini-batch number 22000
+Training mini-batch number 23000
+Training mini-batch number 24000
+Epoch 4: validation accuracy 96.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 96.38%
+Training mini-batch number 25000
+Training mini-batch number 26000
+Training mini-batch number 27000
+Training mini-batch number 28000
+Training mini-batch number 29000
+Epoch 5: validation accuracy 96.99%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 96.80%
+Training mini-batch number 30000
+Training mini-batch number 31000
+Training mini-batch number 32000
+Training mini-batch number 33000
+Training mini-batch number 34000
+Epoch 6: validation accuracy 97.09%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.00%
+Training mini-batch number 35000
+Training mini-batch number 36000
+Training mini-batch number 37000
+Training mini-batch number 38000
+Training mini-batch number 39000
+Epoch 7: validation accuracy 97.20%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.06%
+Training mini-batch number 40000
+Training mini-batch number 41000
+Training mini-batch number 42000
+Training mini-batch number 43000
+Training mini-batch number 44000
+Epoch 8: validation accuracy 97.28%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.12%
+Training mini-batch number 45000
+Training mini-batch number 46000
+Training mini-batch number 47000
+Training mini-batch number 48000
+Training mini-batch number 49000
+Epoch 9: validation accuracy 97.37%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.28%
+Training mini-batch number 50000
+Training mini-batch number 51000
+Training mini-batch number 52000
+Training mini-batch number 53000
+Training mini-batch number 54000
+Epoch 10: validation accuracy 97.41%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.30%
+Training mini-batch number 55000
+Training mini-batch number 56000
+Training mini-batch number 57000
+Training mini-batch number 58000
+Training mini-batch number 59000
+Epoch 11: validation accuracy 97.42%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.41%
+Training mini-batch number 60000
+Training mini-batch number 61000
+Training mini-batch number 62000
+Training mini-batch number 63000
+Training mini-batch number 64000
+Epoch 12: validation accuracy 97.47%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.42%
+Training mini-batch number 65000
+Training mini-batch number 66000
+Training mini-batch number 67000
+Training mini-batch number 68000
+Training mini-batch number 69000
+Epoch 13: validation accuracy 97.55%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.43%
+Training mini-batch number 70000
+Training mini-batch number 71000
+Training mini-batch number 72000
+Training mini-batch number 73000
+Training mini-batch number 74000
+Epoch 14: validation accuracy 97.67%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.47%
+Training mini-batch number 75000
+Training mini-batch number 76000
+Training mini-batch number 77000
+Training mini-batch number 78000
+Training mini-batch number 79000
+Epoch 15: validation accuracy 97.74%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.48%
+Training mini-batch number 80000
+Training mini-batch number 81000
+Training mini-batch number 82000
+Training mini-batch number 83000
+Training mini-batch number 84000
+Epoch 16: validation accuracy 97.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.51%
+Training mini-batch number 85000
+Training mini-batch number 86000
+Training mini-batch number 87000
+Training mini-batch number 88000
+Training mini-batch number 89000
+Epoch 17: validation accuracy 97.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.51%
+Training mini-batch number 90000
+Training mini-batch number 91000
+Training mini-batch number 92000
+Training mini-batch number 93000
+Training mini-batch number 94000
+Epoch 18: validation accuracy 97.82%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.52%
+Training mini-batch number 95000
+Training mini-batch number 96000
+Training mini-batch number 97000
+Training mini-batch number 98000
+Training mini-batch number 99000
+Epoch 19: validation accuracy 97.83%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.53%
+Training mini-batch number 100000
+Training mini-batch number 101000
+Training mini-batch number 102000
+Training mini-batch number 103000
+Training mini-batch number 104000
+Epoch 20: validation accuracy 97.83%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.55%
+Training mini-batch number 105000
+Training mini-batch number 106000
+Training mini-batch number 107000
+Training mini-batch number 108000
+Training mini-batch number 109000
+Epoch 21: validation accuracy 97.82%
+Training mini-batch number 110000
+Training mini-batch number 111000
+Training mini-batch number 112000
+Training mini-batch number 113000
+Training mini-batch number 114000
+Epoch 22: validation accuracy 97.87%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.57%
+Training mini-batch number 115000
+Training mini-batch number 116000
+Training mini-batch number 117000
+Training mini-batch number 118000
+Training mini-batch number 119000
+Epoch 23: validation accuracy 97.87%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.57%
+Training mini-batch number 120000
+Training mini-batch number 121000
+Training mini-batch number 122000
+Training mini-batch number 123000
+Training mini-batch number 124000
+Epoch 24: validation accuracy 97.88%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.57%
+Training mini-batch number 125000
+Training mini-batch number 126000
+Training mini-batch number 127000
+Training mini-batch number 128000
+Training mini-batch number 129000
+Epoch 25: validation accuracy 97.88%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.54%
+Training mini-batch number 130000
+Training mini-batch number 131000
+Training mini-batch number 132000
+Training mini-batch number 133000
+Training mini-batch number 134000
+Epoch 26: validation accuracy 97.91%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.57%
+Training mini-batch number 135000
+Training mini-batch number 136000
+Training mini-batch number 137000
+Training mini-batch number 138000
+Training mini-batch number 139000
+Epoch 27: validation accuracy 97.93%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.56%
+Training mini-batch number 140000
+Training mini-batch number 141000
+Training mini-batch number 142000
+Training mini-batch number 143000
+Training mini-batch number 144000
+Epoch 28: validation accuracy 97.91%
+Training mini-batch number 145000
+Training mini-batch number 146000
+Training mini-batch number 147000
+Training mini-batch number 148000
+Training mini-batch number 149000
+Epoch 29: validation accuracy 97.89%
+Training mini-batch number 150000
+Training mini-batch number 151000
+Training mini-batch number 152000
+Training mini-batch number 153000
+Training mini-batch number 154000
+Epoch 30: validation accuracy 97.89%
+Training mini-batch number 155000
+Training mini-batch number 156000
+Training mini-batch number 157000
+Training mini-batch number 158000
+Training mini-batch number 159000
+Epoch 31: validation accuracy 97.90%
+Training mini-batch number 160000
+Training mini-batch number 161000
+Training mini-batch number 162000
+Training mini-batch number 163000
+Training mini-batch number 164000
+Epoch 32: validation accuracy 97.89%
+Training mini-batch number 165000
+Training mini-batch number 166000
+Training mini-batch number 167000
+Training mini-batch number 168000
+Training mini-batch number 169000
+Epoch 33: validation accuracy 97.90%
+Training mini-batch number 170000
+Training mini-batch number 171000
+Training mini-batch number 172000
+Training mini-batch number 173000
+Training mini-batch number 174000
+Epoch 34: validation accuracy 97.90%
+Training mini-batch number 175000
+Training mini-batch number 176000
+Training mini-batch number 177000
+Training mini-batch number 178000
+Training mini-batch number 179000
+Epoch 35: validation accuracy 97.89%
+Training mini-batch number 180000
+Training mini-batch number 181000
+Training mini-batch number 182000
+Training mini-batch number 183000
+Training mini-batch number 184000
+Epoch 36: validation accuracy 97.90%
+Training mini-batch number 185000
+Training mini-batch number 186000
+Training mini-batch number 187000
+Training mini-batch number 188000
+Training mini-batch number 189000
+Epoch 37: validation accuracy 97.90%
+Training mini-batch number 190000
+Training mini-batch number 191000
+Training mini-batch number 192000
+Training mini-batch number 193000
+Training mini-batch number 194000
+Epoch 38: validation accuracy 97.94%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.67%
+Training mini-batch number 195000
+Training mini-batch number 196000
+Training mini-batch number 197000
+Training mini-batch number 198000
+Training mini-batch number 199000
+Epoch 39: validation accuracy 97.96%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.69%
+Training mini-batch number 200000
+Training mini-batch number 201000
+Training mini-batch number 202000
+Training mini-batch number 203000
+Training mini-batch number 204000
+Epoch 40: validation accuracy 97.97%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.72%
+Training mini-batch number 205000
+Training mini-batch number 206000
+Training mini-batch number 207000
+Training mini-batch number 208000
+Training mini-batch number 209000
+Epoch 41: validation accuracy 97.96%
+Training mini-batch number 210000
+Training mini-batch number 211000
+Training mini-batch number 212000
+Training mini-batch number 213000
+Training mini-batch number 214000
+Epoch 42: validation accuracy 97.97%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.72%
+Training mini-batch number 215000
+Training mini-batch number 216000
+Training mini-batch number 217000
+Training mini-batch number 218000
+Training mini-batch number 219000
+Epoch 43: validation accuracy 97.98%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.76%
+Training mini-batch number 220000
+Training mini-batch number 221000
+Training mini-batch number 222000
+Training mini-batch number 223000
+Training mini-batch number 224000
+Epoch 44: validation accuracy 97.97%
+Training mini-batch number 225000
+Training mini-batch number 226000
+Training mini-batch number 227000
+Training mini-batch number 228000
+Training mini-batch number 229000
+Epoch 45: validation accuracy 98.00%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.77%
+Training mini-batch number 230000
+Training mini-batch number 231000
+Training mini-batch number 232000
+Training mini-batch number 233000
+Training mini-batch number 234000
+Epoch 46: validation accuracy 97.98%
+Training mini-batch number 235000
+Training mini-batch number 236000
+Training mini-batch number 237000
+Training mini-batch number 238000
+Training mini-batch number 239000
+Epoch 47: validation accuracy 97.98%
+Training mini-batch number 240000
+Training mini-batch number 241000
+Training mini-batch number 242000
+Training mini-batch number 243000
+Training mini-batch number 244000
+Epoch 48: validation accuracy 97.98%
+Training mini-batch number 245000
+Training mini-batch number 246000
+Training mini-batch number 247000
+Training mini-batch number 248000
+Training mini-batch number 249000
+Epoch 49: validation accuracy 97.99%
+Training mini-batch number 250000
+Training mini-batch number 251000
+Training mini-batch number 252000
+Training mini-batch number 253000
+Training mini-batch number 254000
+Epoch 50: validation accuracy 98.00%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.79%
+Training mini-batch number 255000
+Training mini-batch number 256000
+Training mini-batch number 257000
+Training mini-batch number 258000
+Training mini-batch number 259000
+Epoch 51: validation accuracy 98.01%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.80%
+Training mini-batch number 260000
+Training mini-batch number 261000
+Training mini-batch number 262000
+Training mini-batch number 263000
+Training mini-batch number 264000
+Epoch 52: validation accuracy 98.00%
+Training mini-batch number 265000
+Training mini-batch number 266000
+Training mini-batch number 267000
+Training mini-batch number 268000
+Training mini-batch number 269000
+Epoch 53: validation accuracy 98.01%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.79%
+Training mini-batch number 270000
+Training mini-batch number 271000
+Training mini-batch number 272000
+Training mini-batch number 273000
+Training mini-batch number 274000
+Epoch 54: validation accuracy 98.02%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.79%
+Training mini-batch number 275000
+Training mini-batch number 276000
+Training mini-batch number 277000
+Training mini-batch number 278000
+Training mini-batch number 279000
+Epoch 55: validation accuracy 98.01%
+Training mini-batch number 280000
+Training mini-batch number 281000
+Training mini-batch number 282000
+Training mini-batch number 283000
+Training mini-batch number 284000
+Epoch 56: validation accuracy 98.01%
+Training mini-batch number 285000
+Training mini-batch number 286000
+Training mini-batch number 287000
+Training mini-batch number 288000
+Training mini-batch number 289000
+Epoch 57: validation accuracy 98.00%
+Training mini-batch number 290000
+Training mini-batch number 291000
+Training mini-batch number 292000
+Training mini-batch number 293000
+Training mini-batch number 294000
+Epoch 58: validation accuracy 98.01%
+Training mini-batch number 295000
+Training mini-batch number 296000
+Training mini-batch number 297000
+Training mini-batch number 298000
+Training mini-batch number 299000
+Epoch 59: validation accuracy 98.01%
+Finished training network.
+Best validation accuracy of 98.02% obtained at iteration 274999
+Corresponding test accuracy of 97.79%
+dennis-run training end
+1.6286509037
+0.834059000015
+1.19209289551e-06
+199.021960974
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ python dennis-run.py
+dennis-run starting ...
+mnist_loader starting ...
+dennis-run program starting
+Trying to run under a GPU.  If this is not desired, then modify network3.py
+to set the GPU flag to False.
+dennis-run training starting
+Training mini-batch number 0
+Training mini-batch number 1000
+Training mini-batch number 2000
+Training mini-batch number 3000
+Training mini-batch number 4000
+Epoch 0: validation accuracy 92.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 92.07%
+Training mini-batch number 5000
+Training mini-batch number 6000
+Training mini-batch number 7000
+Training mini-batch number 8000
+Training mini-batch number 9000
+Epoch 1: validation accuracy 94.88%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 94.06%
+Training mini-batch number 10000
+Training mini-batch number 11000
+Training mini-batch number 12000
+Training mini-batch number 13000
+Training mini-batch number 14000
+Epoch 2: validation accuracy 95.70%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 95.21%
+Training mini-batch number 15000
+Training mini-batch number 16000
+Training mini-batch number 17000
+Training mini-batch number 18000
+Training mini-batch number 19000
+Epoch 3: validation accuracy 96.29%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 95.79%
+Training mini-batch number 20000
+Training mini-batch number 21000
+Training mini-batch number 22000
+Training mini-batch number 23000
+Training mini-batch number 24000
+Epoch 4: validation accuracy 96.66%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 96.12%
+Training mini-batch number 25000
+Training mini-batch number 26000
+Training mini-batch number 27000
+Training mini-batch number 28000
+Training mini-batch number 29000
+Epoch 5: validation accuracy 96.93%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 96.52%
+Training mini-batch number 30000
+Training mini-batch number 31000
+Training mini-batch number 32000
+Training mini-batch number 33000
+Training mini-batch number 34000
+Epoch 6: validation accuracy 96.99%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 96.71%
+Training mini-batch number 35000
+Training mini-batch number 36000
+Training mini-batch number 37000
+Training mini-batch number 38000
+Training mini-batch number 39000
+Epoch 7: validation accuracy 97.14%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 96.91%
+Training mini-batch number 40000
+Training mini-batch number 41000
+Training mini-batch number 42000
+Training mini-batch number 43000
+Training mini-batch number 44000
+Epoch 8: validation accuracy 97.19%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.02%
+Training mini-batch number 45000
+Training mini-batch number 46000
+Training mini-batch number 47000
+Training mini-batch number 48000
+Training mini-batch number 49000
+Epoch 9: validation accuracy 97.26%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.12%
+Training mini-batch number 50000
+Training mini-batch number 51000
+Training mini-batch number 52000
+Training mini-batch number 53000
+Training mini-batch number 54000
+Epoch 10: validation accuracy 97.32%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.15%
+Training mini-batch number 55000
+Training mini-batch number 56000
+Training mini-batch number 57000
+Training mini-batch number 58000
+Training mini-batch number 59000
+Epoch 11: validation accuracy 97.37%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.24%
+Training mini-batch number 60000
+Training mini-batch number 61000
+Training mini-batch number 62000
+Training mini-batch number 63000
+Training mini-batch number 64000
+Epoch 12: validation accuracy 97.41%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.33%
+Training mini-batch number 65000
+Training mini-batch number 66000
+Training mini-batch number 67000
+Training mini-batch number 68000
+Training mini-batch number 69000
+Epoch 13: validation accuracy 97.51%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.38%
+Training mini-batch number 70000
+Training mini-batch number 71000
+Training mini-batch number 72000
+Training mini-batch number 73000
+Training mini-batch number 74000
+Epoch 14: validation accuracy 97.55%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.43%
+Training mini-batch number 75000
+Training mini-batch number 76000
+Training mini-batch number 77000
+Training mini-batch number 78000
+Training mini-batch number 79000
+Epoch 15: validation accuracy 97.59%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.47%
+Training mini-batch number 80000
+Training mini-batch number 81000
+Training mini-batch number 82000
+Training mini-batch number 83000
+Training mini-batch number 84000
+Epoch 16: validation accuracy 97.57%
+Training mini-batch number 85000
+Training mini-batch number 86000
+Training mini-batch number 87000
+Training mini-batch number 88000
+Training mini-batch number 89000
+Epoch 17: validation accuracy 97.63%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.54%
+Training mini-batch number 90000
+Training mini-batch number 91000
+Training mini-batch number 92000
+Training mini-batch number 93000
+Training mini-batch number 94000
+Epoch 18: validation accuracy 97.65%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.57%
+Training mini-batch number 95000
+Training mini-batch number 96000
+Training mini-batch number 97000
+Training mini-batch number 98000
+Training mini-batch number 99000
+Epoch 19: validation accuracy 97.65%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.63%
+Training mini-batch number 100000
+Training mini-batch number 101000
+Training mini-batch number 102000
+Training mini-batch number 103000
+Training mini-batch number 104000
+Epoch 20: validation accuracy 97.68%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.62%
+Training mini-batch number 105000
+Training mini-batch number 106000
+Training mini-batch number 107000
+Training mini-batch number 108000
+Training mini-batch number 109000
+Epoch 21: validation accuracy 97.74%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.65%
+Training mini-batch number 110000
+Training mini-batch number 111000
+Training mini-batch number 112000
+Training mini-batch number 113000
+Training mini-batch number 114000
+Epoch 22: validation accuracy 97.71%
+Training mini-batch number 115000
+Training mini-batch number 116000
+Training mini-batch number 117000
+Training mini-batch number 118000
+Training mini-batch number 119000
+Epoch 23: validation accuracy 97.74%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.71%
+Training mini-batch number 120000
+Training mini-batch number 121000
+Training mini-batch number 122000
+Training mini-batch number 123000
+Training mini-batch number 124000
+Epoch 24: validation accuracy 97.75%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.75%
+Training mini-batch number 125000
+Training mini-batch number 126000
+Training mini-batch number 127000
+Training mini-batch number 128000
+Training mini-batch number 129000
+Epoch 25: validation accuracy 97.75%
+Training mini-batch number 130000
+Training mini-batch number 131000
+Training mini-batch number 132000
+Training mini-batch number 133000
+Training mini-batch number 134000
+Epoch 26: validation accuracy 97.73%
+Training mini-batch number 135000
+Training mini-batch number 136000
+Training mini-batch number 137000
+Training mini-batch number 138000
+Training mini-batch number 139000
+Epoch 27: validation accuracy 97.73%
+Training mini-batch number 140000
+Training mini-batch number 141000
+Training mini-batch number 142000
+Training mini-batch number 143000
+Training mini-batch number 144000
+Epoch 28: validation accuracy 97.75%
+Training mini-batch number 145000
+Training mini-batch number 146000
+Training mini-batch number 147000
+Training mini-batch number 148000
+Training mini-batch number 149000
+Epoch 29: validation accuracy 97.72%
+Training mini-batch number 150000
+Training mini-batch number 151000
+Training mini-batch number 152000
+Training mini-batch number 153000
+Training mini-batch number 154000
+Epoch 30: validation accuracy 97.72%
+Training mini-batch number 155000
+Training mini-batch number 156000
+Training mini-batch number 157000
+Training mini-batch number 158000
+Training mini-batch number 159000
+Epoch 31: validation accuracy 97.72%
+Training mini-batch number 160000
+Training mini-batch number 161000
+Training mini-batch number 162000
+Training mini-batch number 163000
+Training mini-batch number 164000
+Epoch 32: validation accuracy 97.71%
+Training mini-batch number 165000
+Training mini-batch number 166000
+Training mini-batch number 167000
+Training mini-batch number 168000
+Training mini-batch number 169000
+Epoch 33: validation accuracy 97.70%
+Training mini-batch number 170000
+Training mini-batch number 171000
+Training mini-batch number 172000
+Training mini-batch number 173000
+Training mini-batch number 174000
+Epoch 34: validation accuracy 97.71%
+Training mini-batch number 175000
+Training mini-batch number 176000
+Training mini-batch number 177000
+Training mini-batch number 178000
+Training mini-batch number 179000
+Epoch 35: validation accuracy 97.71%
+Training mini-batch number 180000
+Training mini-batch number 181000
+Training mini-batch number 182000
+Training mini-batch number 183000
+Training mini-batch number 184000
+Epoch 36: validation accuracy 97.70%
+Training mini-batch number 185000
+Training mini-batch number 186000
+Training mini-batch number 187000
+Training mini-batch number 188000
+Training mini-batch number 189000
+Epoch 37: validation accuracy 97.73%
+Training mini-batch number 190000
+Training mini-batch number 191000
+Training mini-batch number 192000
+Training mini-batch number 193000
+Training mini-batch number 194000
+Epoch 38: validation accuracy 97.73%
+Training mini-batch number 195000
+Training mini-batch number 196000
+Training mini-batch number 197000
+Training mini-batch number 198000
+Training mini-batch number 199000
+Epoch 39: validation accuracy 97.74%
+Training mini-batch number 200000
+Training mini-batch number 201000
+Training mini-batch number 202000
+Training mini-batch number 203000
+Training mini-batch number 204000
+Epoch 40: validation accuracy 97.74%
+Training mini-batch number 205000
+Training mini-batch number 206000
+Training mini-batch number 207000
+Training mini-batch number 208000
+Training mini-batch number 209000
+Epoch 41: validation accuracy 97.72%
+Training mini-batch number 210000
+Training mini-batch number 211000
+Training mini-batch number 212000
+Training mini-batch number 213000
+Training mini-batch number 214000
+Epoch 42: validation accuracy 97.76%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.90%
+Training mini-batch number 215000
+Training mini-batch number 216000
+Training mini-batch number 217000
+Training mini-batch number 218000
+Training mini-batch number 219000
+Epoch 43: validation accuracy 97.76%
+Training mini-batch number 220000
+Training mini-batch number 221000
+Training mini-batch number 222000
+Training mini-batch number 223000
+Training mini-batch number 224000
+Epoch 44: validation accuracy 97.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.93%
+Training mini-batch number 225000
+Training mini-batch number 226000
+Training mini-batch number 227000
+Training mini-batch number 228000
+Training mini-batch number 229000
+Epoch 45: validation accuracy 97.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.94%
+Training mini-batch number 230000
+Training mini-batch number 231000
+Training mini-batch number 232000
+Training mini-batch number 233000
+Training mini-batch number 234000
+Epoch 46: validation accuracy 97.78%
+This is the best validation accuracy to date.
+The corresponding test accuracy is 97.94%
+Training mini-batch number 235000
+Training mini-batch number 236000
+Training mini-batch number 237000
+Training mini-batch number 238000
+Training mini-batch number 239000
+Epoch 47: validation accuracy 97.76%
+Training mini-batch number 240000
+Training mini-batch number 241000
+Training mini-batch number 242000
+Training mini-batch number 243000
+Training mini-batch number 244000
+Epoch 48: validation accuracy 97.76%
+Training mini-batch number 245000
+Training mini-batch number 246000
+Training mini-batch number 247000
+Training mini-batch number 248000
+Training mini-batch number 249000
+Epoch 49: validation accuracy 97.76%
+Training mini-batch number 250000
+Training mini-batch number 251000
+Training mini-batch number 252000
+Training mini-batch number 253000
+Training mini-batch number 254000
+Epoch 50: validation accuracy 97.76%
+Training mini-batch number 255000
+Training mini-batch number 256000
+Training mini-batch number 257000
+Training mini-batch number 258000
+Training mini-batch number 259000
+Epoch 51: validation accuracy 97.76%
+Training mini-batch number 260000
+Training mini-batch number 261000
+Training mini-batch number 262000
+Training mini-batch number 263000
+Training mini-batch number 264000
+Epoch 52: validation accuracy 97.76%
+Training mini-batch number 265000
+Training mini-batch number 266000
+Training mini-batch number 267000
+Training mini-batch number 268000
+Training mini-batch number 269000
+Epoch 53: validation accuracy 97.74%
+Training mini-batch number 270000
+Training mini-batch number 271000
+Training mini-batch number 272000
+Training mini-batch number 273000
+Training mini-batch number 274000
+Epoch 54: validation accuracy 97.75%
+Training mini-batch number 275000
+Training mini-batch number 276000
+Training mini-batch number 277000
+Training mini-batch number 278000
+Training mini-batch number 279000
+Epoch 55: validation accuracy 97.72%
+Training mini-batch number 280000
+Training mini-batch number 281000
+Training mini-batch number 282000
+Training mini-batch number 283000
+Training mini-batch number 284000
+Epoch 56: validation accuracy 97.72%
+Training mini-batch number 285000
+Training mini-batch number 286000
+Training mini-batch number 287000
+Training mini-batch number 288000
+Training mini-batch number 289000
+Epoch 57: validation accuracy 97.74%
+Training mini-batch number 290000
+Training mini-batch number 291000
+Training mini-batch number 292000
+Training mini-batch number 293000
+Training mini-batch number 294000
+Epoch 58: validation accuracy 97.74%
+Training mini-batch number 295000
+Training mini-batch number 296000
+Training mini-batch number 297000
+Training mini-batch number 298000
+Training mini-batch number 299000
+Epoch 59: validation accuracy 97.74%
+Finished training network.
+Best validation accuracy of 97.78% obtained at iteration 234999
+Corresponding test accuracy of 97.94%
+dennis-run training end
+1.32342100143
+0.350239992142
+0.0
+191.866152048
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ ls
+conv.py           dennis-run-4.txt       dennis-test-theano.py              fibo.py                    mnist_loader.pyc  network3a.py   network.py   test-write.txt
+dennis-run-2.txt  dennis-run.py          dennis-theano-did-use-gpu.log.txt  mnist_average_darkness.py  mnist_svm.py      network3a.pyc  network.pyc
+dennis-run-3.txt  dennis_test_module.py  expand_mnist.py                    mnist_loader.py            network2.py       network3.py    old
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ python network.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ ls
+conv.py           dennis-run-4.txt       dennis-test-theano.py              fibo.py                    mnist_loader.pyc  network3a.py   network.py   test-write.txt
+dennis-run-2.txt  dennis-run.py          dennis-theano-did-use-gpu.log.txt  mnist_average_darkness.py  mnist_svm.py      network3a.pyc  network.pyc
+dennis-run-3.txt  dennis_test_module.py  expand_mnist.py                    mnist_loader.py            network2.py       network3.py    old
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ python network2.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ vim netwokrk.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ vim network.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ cp dennis-run.py dennis-run-n3.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ cp dennis-run.py dennis-run-n1.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ vim dennis-run-n1.py
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ ls
+conv.py           dennis-run-4.txt  dennis-run.py          dennis-theano-did-use-gpu.log.txt  mnist_average_darkness.py  mnist_svm.py  network3a.pyc  network.pyc
+dennis-run-2.txt  dennis-run-n1.py  dennis_test_module.py  expand_mnist.py                    mnist_loader.py            network2.py   network3.py    old
+dennis-run-3.txt  dennis-run-n3.py  dennis-test-theano.py  fibo.py                            mnist_loader.pyc           network3a.py  network.py     test-write.txt
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$ python dennis-run-n1.py
+dennis-run starting ...
+mnist_loader starting ...
+dennis-run program starting
+dennis-run training starting
+Epoch 0: 8953 / 10000
+Epoch 1: 9197 / 10000
+Epoch 2: 9307 / 10000
+Epoch 3: 9323 / 10000
+Epoch 4: 9345 / 10000
+Epoch 5: 9389 / 10000
+Epoch 6: 9419 / 10000
+Epoch 7: 9432 / 10000
+Epoch 8: 9421 / 10000
+Epoch 9: 9436 / 10000
+Epoch 10: 9440 / 10000
+Epoch 11: 9437 / 10000
+Epoch 12: 9440 / 10000
+Epoch 13: 9444 / 10000
+Epoch 14: 9467 / 10000
+Epoch 15: 9475 / 10000
+Epoch 16: 9447 / 10000
+Epoch 17: 9456 / 10000
+Epoch 18: 9483 / 10000
+Epoch 19: 9470 / 10000
+Epoch 20: 9467 / 10000
+Epoch 21: 9485 / 10000
+Epoch 22: 9479 / 10000
+Epoch 23: 9480 / 10000
+Epoch 24: 9449 / 10000
+Epoch 25: 9481 / 10000
+Epoch 26: 9458 / 10000
+Epoch 27: 9480 / 10000
+Epoch 28: 9479 / 10000
+Epoch 29: 9493 / 10000
+dennis-run training end
+1.34661698341
+0.0117039680481
+0.00464105606079
+209.481593847
+dn-dom@dndom-desktop:~/Downloads/neural-networks-and-deep-learning/src$
