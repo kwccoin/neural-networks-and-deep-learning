@@ -1,5 +1,5 @@
 """
-network-rodeo.py
+network_rodeo.py
 ~~~~~~~~~~
 
 A module to implement the stochastic gradient descent learning
@@ -61,8 +61,13 @@ class Network(object):
             mini_batches = [
                 training_data[k:k+mini_batch_size]
                 for k in xrange(0, n, mini_batch_size)]
+            #print "mini_batches : {0}".format(mini_batches)
             for mini_batch in mini_batches:
+            	#print "mini_batch : {0}".format(mini_batch)
                 self.update_mini_batch(mini_batch, eta)
+                #import time
+                #print "starting to sleep, please cancel"
+                #time.sleep(500)
             if test_data:
                 print "Epoch {0}: {1} / {2}".format(
                     j, self.evaluate(test_data), n_test)
