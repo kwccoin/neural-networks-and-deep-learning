@@ -10,10 +10,10 @@ t0 = time.time()
 
 print "simple_loader starting ..."
 #import simple_loader_2i_1o #<- 2i * 1o
-import simple_loader_2i_2o  #<- 2i * 2o
-training_data   = simple_loader.training_data
-validation_data = simple_loader.validation_data
-test_data       = simple_loader.test_data
+import simple_loader_2i_1o  #<- 2i * 2o
+training_data   = simple_loader_2i_1o.training_data
+validation_data = simple_loader_2i_1o.validation_data
+test_data       = simple_loader_2i_1o.test_data
 
 
 #print "mnist_loader starting ..."
@@ -38,15 +38,15 @@ test_data       = simple_loader.test_data
 
 #training_data = training_data_full[0:2]
 #import mnist_training_2_only
-#training_data = mnist_training_2_only.training_data_2_only 
+#training_data = mnist_training_2_only.training_data_2_only
 
 #validation_data = validation_data_full[0:2]
 #import mnist_validation_2_only
-#validation_data = mnist_validation_2_only.validation_data_2_only 
+#validation_data = mnist_validation_2_only.validation_data_2_only
 
 #test_data       = test_data_full[0:2]
 #import mnist_test_2_only
-#validation_data = mnist_test_2_only.test_data_2_only 
+#validation_data = mnist_test_2_only.test_data_2_only
 
 
 print "==== start"
@@ -68,18 +68,25 @@ import network_rodeo
 #import network3a
 t2 = time.time()
 #net=network_rodeo.Network([784, 1, 10])
-net=network_rodeo.Network([2, 2, 2])
+net=network_rodeo.Network([2, 2, 2]) # due to 1 bin
+#never use this - 2 2 1
 
-# for net=network_rodeo.Network([2, 2, 1])
-#net.biases = [np.array([[ 0.1],
-#       [0.2]]), np.array([[0.3]])]
-#net.weights = [np.array([[0.4,0.5 ],
-#       [ 0.6,  0.7]]), np.array([[0.8,  0.9 ]])]
+#net.num_layers : 3
+#net.sizes : [2, 2, 2] <--- not sure how it works
+#net.biases = [np.array([[ 0.11],
+#       [ 0.12]]), np.array([[ 0.21],
+#       [0.22 ]])]
+#net.weights = [np.array([[ 0.31, 0.32],
+#       [0.42,  0.42]]), np.array([[ 0.51,  0.52],
+#       [0.61,  0.62]])]
 
-print "net.num_layers : {0}".format(net.num_layers)
+# now some of those 2-h2-2 generate 0.05 0.99 ... not sure how to do that !!!
+# how to test that ... not sure
+
+print "\nnet.num_layers : {0}".format(net.num_layers)
 print "net.sizes : {0}".format(net.sizes)
-print "net.biases : {0}".format(net.biases) 
-print "net.weights : {0}".format(net.weights)
+print "net.biases : {0}".format(net.biases)
+print "net.weights : {0}\n".format(net.weights)
 
 t3 = time.time()
 print "dennis-run training starting"
@@ -89,7 +96,7 @@ print "dennis-run training starting"
 
 #net.SGD(training_data, 2, 1, 3.0, test_data=test_data)
 
-net.SGD(training_data, 1, 1, 1.0, test_data=test_data)
+net.SGD(training_data, 5000, 1, 0.5, test_data=test_data)
 
 
 #time.sleep(500)
@@ -102,7 +109,7 @@ net.SGD(training_data, 1, 1, 1.0, test_data=test_data)
 #net = Network([
 #        FullyConnectedLayer(n_in=784, n_out=100),
 #        SoftmaxLayer(n_in=100, n_out=10)], mini_batch_size)
-#net.SGD(training_data, 60, mini_batch_size, 0.1, 
+#net.SGD(training_data, 60, mini_batch_size, 0.1,
 #            validation_data, test_data)
 
 t4 = time.time()
@@ -117,12 +124,3 @@ exit()
 
 # type dennis-run.txt
 # cat  dennis-run.txt
-
-
-
-
-
-
-
-
-

@@ -40,8 +40,10 @@ class Network(object):
 
     def feedforward(self, a):
         """Return the output of the network if ``a`` is input."""
+        print "\n input a is  : {0}".format(a)
         for b, w in zip(self.biases, self.weights):
             a = sigmoid(np.dot(w, a)+b)
+        print "output a is : {0}\n".format(a)
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
@@ -82,6 +84,12 @@ class Network(object):
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         for x, y in mini_batch:
+            # dennis:
+            # the key is that the self.weights and biases are NOT updated
+            # hence during a mini_batch whilst the delta is accumulative
+            # the forward calculation are not changed
+            # effectively a whole "batch" is used to average out the changes
+            # and 1 batch 1 new sets of weights and biases
             delta_nabla_b, delta_nabla_w = self.backprop(x, y)
             nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
@@ -89,6 +97,8 @@ class Network(object):
                         for w, nw in zip(self.weights, nabla_w)]
         self.biases = [b-(eta/len(mini_batch))*nb
                        for b, nb in zip(self.biases, nabla_b)]
+        print "\nself.biases : {0}".format(self.biases)
+        print "self.weights : {0}\n".format(self.weights)
 
     def backprop(self, x, y):
         """Return a tuple ``(nabla_b, nabla_w)`` representing the
@@ -129,7 +139,48 @@ class Network(object):
         """Return the number of test inputs for which the neural
         network outputs the correct result. Note that the neural
         network's output is assumed to be the index of whichever
-        neuron in the final layer has the highest activation."""
+        neuron in the final layer has the highest activation.
+
+        dennis: for NOR gate it is not actually 2 h 1 but 2 h 2
+
+        yes it look like this and hence logicall it is 2 h 1
+
+         0 0 -> 1
+         1 0 -> 0
+         0 0 -> 0
+         1 1 -> 1
+
+         but if you use only 1 neuron at the back one has to change the program
+         or in our case use 0 for 0 and 1 for 1 but really require change of program
+
+         This is a need to do so if one simulate 0-9 digit
+         using 2^4 i.e. 0000 0001 0010 0011 ... 0110
+
+         That also require change of program actually you cannot just use an index
+         you have to use an array as well for the validation ...
+
+         2 h ... h 2 (not 1)
+
+         (0 0) -> (0, 1)
+         (1 0) -> (1, 0)
+         (0 1) -> (1, 0)
+         (1 1) -> (0, 1)
+
+         Now when input testing and the number is an index ... it is classifer
+
+         (0 0) -> 1
+         (1 0) -> 0
+         (0 1) -> 0
+         (1 1) -> 1
+
+
+        """
+
+        # if not using index, one can loop and compare index
+        # assume testing, validiation and training same data structure
+        # after feedforward one can compare the patten of self.forward and y
+        # and if agree update the test_results not by argmax but loop
+
         test_results = [(np.argmax(self.feedforward(x)), y)
                         for (x, y) in test_data]
         return sum(int(x == y) for (x, y) in test_results)
