@@ -8,12 +8,12 @@ print "dennis-run starting ..."
 import time
 t0 = time.time()
 
-print "simple_loader starting ..."
+print "simple_regression_2i2o_loader ..."
 #import simple_loader_2i_1o #<- 2i * 1o
-import simple_loader_2i_1o  #<- 2i * 2o
-training_data   = simple_loader_2i_1o.training_data
-validation_data = simple_loader_2i_1o.validation_data
-test_data       = simple_loader_2i_1o.test_data
+import simple_regression_2i2o_loader  #<- 2i * 2o
+training_data   = simple_regression_2i2o_loader.training_data
+validation_data = simple_regression_2i2o_loader.validation_data
+test_data       = simple_regression_2i2o_loader.test_data
 
 
 #print "mnist_loader starting ..."
@@ -61,14 +61,14 @@ print "test_data 0 : {0}".format(test_data) # [0])
 print "==== end"
 
 
-print "dennis-run program starting"
+print "simple_regression_2i2o_network starting"
 t1 = time.time()
 
-import network_rodeo
+import simple_regression_2i2o_network
 #import network3a
 t2 = time.time()
 #net=network_rodeo.Network([784, 1, 10])
-net=network_rodeo.Network([2, 2, 2]) # due to 1 bin
+net=simple_regression_2i2o_network.Network([2, 2, 2]) # due to 1 bin
 #never use this - 2 2 1
 
 #net.num_layers : 3
@@ -83,10 +83,47 @@ net=network_rodeo.Network([2, 2, 2]) # due to 1 bin
 # now some of those 2-h2-2 generate 0.05 0.99 ... not sure how to do that !!!
 # how to test that ... not sure
 
+# from https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
+# not sure but in general, weight and bias should belong to the layer n not n-1
+# also we have same bias ...
+
+# the format is generated after one run and change : to = and array to np.array
+
+net.biases = [np.array([[0.35],[ 0.35]]),
+              np.array([[0.60],[ 0.60]])]
+
+net.weights = [np.array([[ 0.15 ,  0.20],
+                      [ 0.25,   0.30]]),
+               np.array([[ 0.40,   0.45],
+                      [ 0.50,   0.55]])]
+
+# after first running the weights and bias is ok but not the calculation of error ?
+
+#self.biases : [array([[ 0.34570531],
+#       [ 0.34526673]]), array([[ 0.53157333],
+#       [ 0.6176443 ]])]
+#self.weights : [array([[ 0.14978527,  0.19570531],
+#       [ 0.24976334,  0.29526673]]), array([[ 0.35648927,  0.4048506 ],
+#       [ 0.51121955,  0.5616421 ]])]
+
+# cf with
+
+# w_1^{+} = 0.149780716
+# w_2^{+} = 0.19956143
+# w_3^{+} = 0.24975114
+# w_4^{+} = 0.29950229
+
+# and
+
+
+
+
 print "\nnet.num_layers : {0}".format(net.num_layers)
 print "net.sizes : {0}".format(net.sizes)
 print "net.biases : {0}".format(net.biases)
 print "net.weights : {0}\n".format(net.weights)
+
+
 
 t3 = time.time()
 print "dennis-run training starting"
@@ -96,7 +133,13 @@ print "dennis-run training starting"
 
 #net.SGD(training_data, 2, 1, 3.0, test_data=test_data)
 
-net.SGD(training_data, 5000, 1, 0.5, test_data=test_data)
+# good for both simple classifer and regression
+#net.SGD(training_data, 1000, 100, 2.0, test_data=test_data)
+
+# just for comparsion with
+#net.SGD(training_data, 1, 1, 0.5, test_data=test_data)
+
+net.SGD(training_data, 500, 10, 0.5, test_data=test_data)
 
 
 #time.sleep(500)
