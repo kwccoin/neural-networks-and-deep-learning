@@ -1,0 +1,111 @@
+Last login: Mon May  1 11:36:38 on ttys002
+
+------------------------------
+PATH
+/Developer/NVIDIA/CUDA-8.0/bin:/usr/local/cuda/bin:/Users/***/miniconda2/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+
+CUDA_HOME
+/usr/local/cuda
+
+DYLD_LIBRARY_PATH
+/Developer/NVIDIA/CUDA-8.0/lib:/Developer/NVIDIA/cudnn-8.0/lib
+===============================
+
+***s-MacBook-Pro:~ ***$ # download the installer script
+***s-MacBook-Pro:~ ***$ wget -q https://raw.githubusercontent.com/daniel-e/rustml/master/dl_datasets.sh
+***s-MacBook-Pro:~ ***$ # execute the script
+***s-MacBook-Pro:~ ***$ bash ./dl_datasets.sh
+
+\e[1;34mdownloading example images ...\e[0m
+> downloading fog.jpg ...
+\e[1;32mdone\e[0m
+\e[1;34mdownloading MNIST dataset of handwritten digits ...\e[0m
+> downloading t10k-images-idx3-ubyte.gz ...
+> downloading t10k-labels-idx1-ubyte.gz ...
+> downloading train-images-idx3-ubyte.gz ...
+> downloading train-labels-idx1-ubyte.gz ...
+\e[1;34mdownloading example videos ...\e[0m
+> downloading day_and_night_in_gray.avi ...
+> downloading day_and_night_in_gray_mask_sky.png ...
+\e[1;32mdone\e[0m
+***s-MacBook-Pro:~ ***$
+
+==========
+
+Last login: Sun Apr 30 19:58:22 on ttys002
+
+------------------------------
+PATH
+/Developer/NVIDIA/CUDA-8.0/bin:/usr/local/cuda/bin:/Users/wsd/miniconda2/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+
+CUDA_HOME
+/usr/local/cuda
+
+DYLD_LIBRARY_PATH
+/Developer/NVIDIA/CUDA-8.0/lib:/Developer/NVIDIA/cudnn-8.0/lib
+===============================
+
+wsds-MacBook-Pro:~ wsd$ curl https://sh.rustup.rs -sSf | sh
+info: downloading installer
+
+Welcome to Rust!
+
+This will download and install the official compiler for the Rust programming
+language, and its package manager, Cargo.
+
+It will add the cargo, rustc, rustup and other commands to Cargo's bin
+directory, located at:
+
+  /Users/wsd/.cargo/bin
+
+This path will then be added to your PATH environment variable by modifying the
+profile file located at:
+
+  /Users/wsd/.profile
+
+You can uninstall at any time with rustup self uninstall and these changes will
+be reverted.
+
+Current installation options:
+
+   default host triple: x86_64-apple-darwin
+     default toolchain: stable
+  modify PATH variable: yes
+
+1) Proceed with installation (default)
+2) Customize installation
+3) Cancel installation
+1
+
+info: syncing channel updates for 'stable-x86_64-apple-darwin'
+info: downloading component 'rustc'
+ 32.8 MiB /  32.8 MiB (100 %)  11.2 MiB/s ETA:   0 s
+info: downloading component 'rust-std'
+ 43.9 MiB /  43.9 MiB (100 %)  11.2 MiB/s ETA:   0 s
+info: downloading component 'cargo'
+info: downloading component 'rust-docs'
+info: installing component 'rustc'
+info: installing component 'rust-std'
+info: installing component 'cargo'
+info: installing component 'rust-docs'
+info: default toolchain set to 'stable'
+
+  stable installed - rustc 1.17.0 (56124baa9 2017-04-24)
+
+
+Rust is installed now. Great!
+
+To get started you need Cargo's bin directory in your PATH environment
+variable. Next time you log in this will be done automatically.
+
+To configure your current shell run source $HOME/.cargo/env
+wsds-MacBook-Pro:~ wsd$ exit
+logout
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+
+[Process completed]
+
+=============
